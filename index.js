@@ -7,7 +7,7 @@ var banana = document.getElementById('bananapng');
 var counter = document.getElementById('counter')
 var timer = document.getElementById('timer')
 
-var counterNum = 0
+var counterNum = 198
 
 console.log('yeet')
 start()
@@ -57,14 +57,15 @@ function start() {
                 timetenths = 2
                 timer.innerHTML = '1.2'
             }
-            else if (counterNums <= 100 && counterNum < 200) {
+            else if (counterNum >= 100) {
                 timeOnes = 1
                 timetenths = 0
                 timer.innerHTML = '1.0'
             }
-            else if (counterNum > 100) {
+            else if (counterNum >= 200) {
                 timeOnes = 0
-                timetenths = 10 - counterNum / 100
+                timetenths = 8
+                timer.innerHTML = '0.8'
             }
             if (counterNum < 100) {
                 banana.style.opacity = String(1 - counterNum / 150)
